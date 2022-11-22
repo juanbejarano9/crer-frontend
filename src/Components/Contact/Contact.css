@@ -1,0 +1,91 @@
+
+.contact{
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+}
+.contact-form{
+    width:100%; 
+    height: auto;
+    margin: 0px;
+    padding: 10px 30px;
+    box-sizing: border-box;
+
+    background-color: var(--colorMasOscuro);
+    border: 0px solid black;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contact-form div{
+    width: 100%;
+    height: auto;
+    margin: 5px 0rem;
+    box-sizing: border-box;
+
+    background-color: var(--colorOscuro);
+    border-radius: 10px;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.contact-form label{
+    width: 30%;
+    height: auto;
+    padding: 0rem;
+
+    text-align: center;
+    font-size: 15px;
+    color: var(--colorSecundario);   
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-form input{
+    width: 70%;
+    height: 30px;
+    padding-left: 10px;
+    box-sizing: border-box;
+
+    font-size: 14px;
+
+    border: 1px solid var(--colorOscuro);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.contact-form textarea{
+    width: 70%;
+    height: 150px;
+    padding: 10px;
+    box-sizing: border-box;
+
+    border: 1px solid var(--colorOscuro);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.contact-form div:last-child input{
+    width: 100%;
+    padding: 0;
+
+    background-color: var(--colorOscuro);
+    border: 1px solid var(--colorOscuro);
+    border-radius: 10px;
+
+    color: var(--colorSecundario);
+}
+
+.contact-form input:focus{
+    outline: none; /* Esta linea elimina el borde negro que aparece en el buscador cuando estamos por escribir un texto sobre el */
+}
+.contact-form textarea:focus{
+    outline: none; /* Esta linea elimina el borde negro que aparece en el buscador cuando estamos por escribir un texto sobre el */
+}
+.contact-form div:last-child input:hover{
+    cursor: pointer;
+}   
