@@ -46,6 +46,8 @@ useEffect(() => {
         height={windowDimension.winHeight}
       />
       <Footer />
+
+      
       <div class="bg-white">
         <p>Tamaño de la pantalla: </p>
         <p>Width:<strong>{windowDimension.winWidth}</strong></p>

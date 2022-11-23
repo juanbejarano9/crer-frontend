@@ -1,5 +1,6 @@
 import React from "react";
-import OffCanvas2 from '../OffCanvas/OffCanvas2'
+import OffCanvas2 from "../OffCanvas/OffCanvas2";
+import Login from "../Login/Login";
 
 let Logo = require("../../../assets/logo/LogoHeader.png");
 let Logo2 = require("../../../assets/logo/crer.png");
@@ -14,8 +15,11 @@ function Header(props) {
             <img src={Logo2} alt="" width="80" height="40" />
           </div>
         </a>
-        <OffCanvas2></OffCanvas2>
-        {/* /* <Offcanvas items2={props} boton={props.changeMain}></Offcanvas> */ }
+        <div className="w-auto d-flex align-items-center">
+          <OffCanvas2 />
+          {/* /* <Offcanvas items2={props} boton={props.changeMain}></Offcanvas> */}
+          <Login />
+        </div>
       </div>
     </nav>
   );

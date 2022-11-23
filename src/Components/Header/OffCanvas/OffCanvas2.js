@@ -1,6 +1,7 @@
 import React from 'react'
 import './OffCanvas2.css'
 import SplitButton from '../SplitButton/SplitButton'
+import Login from '../Login/Login'
 
 let Logo = require("../../../assets/logo/LogoHeader.png");
 
@@ -67,6 +68,7 @@ function OffCanvas2(props) {
             >
               Contacto
             </a>
+            
           </nav>
         </div>
       </div>
