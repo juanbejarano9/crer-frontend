@@ -50,24 +50,26 @@ function Login() {
             </div>
             <div class="modal-body bg-secondary-color text-white p-0">
               <form action="">
-                <div className="p-4">
-                  <div>
+                <div className="p-4 d-flex flex-sm-row flex-column align-items-center">
+                  <div className="d-flex flex-column align-items-center w-50">
                     <label htmlFor="nombre">Nombre</label>
                     <input
                       type="text"
                       id="nombre"
                       name="nombre"
                       placeholder="Juan Bejarano"
+                      className="ps-2"
                     />
                   </div>
 
-                  <div>
+                  <div className="d-flex flex-column align-items-center w-50">
                     <label htmlFor="contraseña">Contraseña</label>
                     <input
                       type="password"
                       id="contraseña"
                       name="contraseña"
-                      placeholder="Juan Bejarano"
+                      placeholder="Contraseña"
+                      className="ps-2"
                     />
                   </div>
                 </div>

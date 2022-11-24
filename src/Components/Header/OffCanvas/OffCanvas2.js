@@ -2,6 +2,7 @@ import React from 'react'
 import './OffCanvas2.css'
 import SplitButton from '../SplitButton/SplitButton'
 import Login from '../Login/Login'
+import {Link} from "react-router-dom"
 
 let Logo = require("../../../assets/logo/LogoHeader.png");
 
@@ -48,14 +49,13 @@ function OffCanvas2(props) {
         {/* Cuerpo del OffCanva - Links */}
         <div className="offcanvas-body m-auto w-100">
           <nav className="nav w-100 flex-column flex-md-row gap-2 justify-content-md-end fs-5 align-items-center">
-            <a
+            <Link
+              to="/"
               className="nav-link active bg-secondary-color rounded text-white "
               href="#Init"
-              aria-current="page"
-              onClick={() => props.boton("0")}
             >
               Inicio
-            </a>
+            </Link>
             <li
               className="nav-link bg-secondary-color rounded text-white"
               href="#Services"

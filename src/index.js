@@ -1,17 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
-import '../node_modules/bootstrap/dist/css/bootstrap-utilities.min.css';
-import bootstrap from 'bootstrap';
+import "../node_modules/bootstrap/dist/css/bootstrap-utilities.min.css";
+import bootstrap from "bootstrap";
 
-import './custom.css'
+import {BrowserRouter} from "react-router-dom"
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import "./custom.css";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
