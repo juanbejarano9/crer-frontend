@@ -2,11 +2,11 @@ import React, { useState, useEffect, useContext } from "react";
 
 import Header from "../components/Header/Header/Header";
 import Banner from "../components/Banner/Banner";
-import Posts from "../components/Posts/Posts";
+import Posts from "../components/Posts/Posts/Posts";
 import Footer from "../components/Footer/Footer";
 import Contact from "../components/Contact/Contact";
 
-import {usePosts} from "../context/postContext"
+import {usePosts} from "../context/postContext" //Hook
 
 export function HomePage(){
   /* Parte del Use State */
@@ -35,8 +35,8 @@ useEffect(() => {
 ]); /* Esta funcion es para evitar que se agregen infinitamente EventListeners */
 
 
-  const myContext = usePosts();
-  console.log(myContext)
+  const {getPosts,posts} = usePosts();
+
   
   return (
     <div className="App appBackground">
@@ -46,8 +46,9 @@ useEffect(() => {
       <Contact
         width={windowDimension.winWidth}
         height={windowDimension.winHeight}
-      />
+      /> 
       <Footer />
+
 
       
       <div class="bg-white">

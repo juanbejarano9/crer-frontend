@@ -1,5 +1,6 @@
 import React from "react";
 import "./SplitButton.css";
+import { Link } from "react-router-dom";
 
 function SplitButton(props) {
   return (
@@ -18,56 +19,23 @@ function SplitButton(props) {
       >
         <span className="visually-hidden">Toggle Dropdown</span>
       </button>
+      
       <ul className="dropdown-menu">
         <li>
-          <a
+          <Link
+            to={"/dashboard"}
             className="dropdown-item"
-            href="#Services"
-            onClick={() => props.boton("1")}
           >
-            ak1
-          </a>
+            Dashboard
+          </Link>
         </li>
-        <li>
-          <a
-            className="dropdown-item"
-            href="#Services"
-            onClick={() => props.boton("2")}
-          >
-            ak2
-          </a>
-        </li>
-        <li>
-          <a
-            className="dropdown-item"
-            href="#Services"
-            onClick={() => props.boton("3")}
-          >
-            ak3
-          </a>
-        </li>
+        
+        
         <li>
           <hr className="dropdown-divider" />
         </li>
-        <li>
-          <a
-            className="dropdown-item"
-            href="#Services"
-            onClick={() => props.boton("4")}
-          >
-            ak4
-          </a>
-        </li>
-        <li>
-          <a
-            className="dropdown-item"
-            href="#Services"
-            onClick={() => props.boton("5")}
-          >
-            {/* {props.items3.items2.items1[4].title} */}
-            ak5
-          </a>
-        </li>
+        
+        
       </ul>
     </div>
   );
