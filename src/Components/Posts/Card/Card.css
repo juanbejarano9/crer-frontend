@@ -114,6 +114,28 @@
   transition: 0.5s;
 }
 
+.serviceCardMedium{
+  height: 220px !important;
+  background: rgb(81,201,236);
+  background: linear-gradient(54deg, rgba(81,201,236,1) 23%, rgba(10,95,225,1) 100%);
+}
+
+.accordionBackground{
+  background: rgb(83,206,241);
+  background: linear-gradient(160deg, rgba(83,206,241,1) 0%, rgba(81,201,236,1) 39%, rgba(45,104,137,1) 65%, rgba(16,25,56,1) 89%);
+}
+
+.accordionBorder{
+  border: 0px !important;
+}
+
+.accordionRadius{
+  border-radius: 0px 0px 4px 4px !important;
+}
+
+
+
+
 /* Medias Querys */
 
 @media only screen and (max-width:1200px){
@@ -178,6 +200,13 @@
   }
   .service img{
       width: 380px;
+      height: 290px;
+  }
+}
+
+@media only screen and (max-width:768px){
+  .service img{
+      width: 150px;
       height: 290px;
   }
 }

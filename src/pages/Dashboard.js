@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { VscEmptyWindow } from "react-icons/vsc";
 
+import "../components/Dashboard/Card/DashCard.css"
+
 import Header from "../components/Header/Header/Header";
 import Footer from "../components/Footer/Footer";
 import Contact from "../components/Contact/Contact";
+import DashCard from "../components/Dashboard/Card/DashCard";
 
 import { usePosts } from "../context/postContext";
 
@@ -24,11 +27,14 @@ export function Dashboard() {
     <div>
       <Header />
       <h1 className="fs-1 fw-bold text-white p-5">Dashboard</h1>
-      <div>
+      <div className="container text-center row">
         {posts.map((post) => (
-          <div key={post._id}>{post.title}</div>
+          <div key={post._id} className="col-4 dashCard">
+            <DashCard post={post}/>
+          </div>
         ))}
       </div>
+      
       <Contact />
       <Footer />
     </div>

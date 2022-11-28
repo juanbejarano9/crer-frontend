@@ -10,6 +10,7 @@ $custom-colors: (
   "gradiente0":rgb(83,206,241)
 );
 
+
 // Merge the maps
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
