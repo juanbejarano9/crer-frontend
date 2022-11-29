@@ -42,7 +42,7 @@ function SplitButton(props) {
         
         {posts.map((post) => (
           <li key={post._id} className="dropdown-item">
-            <a href="">{post.title}</a>
+            <a href="" className="text-black text-decoration-none">{post.title}</a>
           </li>
         ))}
         
