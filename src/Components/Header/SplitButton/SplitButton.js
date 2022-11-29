@@ -2,7 +2,12 @@ import React from "react";
 import "./SplitButton.css";
 import { Link } from "react-router-dom";
 
+import { usePosts } from "../../../context/postContext";
+
 function SplitButton(props) {
+
+  const { posts } = usePosts();
+
   return (
     <div className="btn-group" style={{ height: "30px" }}>
       <button
@@ -35,6 +40,11 @@ function SplitButton(props) {
           <hr className="dropdown-divider" />
         </li>
         
+        {posts.map((post) => (
+          <li key={post._id} className="dropdown-item">
+            <a href="">{post.title}</a>
+          </li>
+        ))}
         
       </ul>
     </div>
