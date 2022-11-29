@@ -1,8 +1,36 @@
 import React from "react";
 import "./DashCard.css";
+import { toast } from "react-hot-toast";
+import { usePosts } from "../../../context/postContext";
 
 function DashCard(props) {
-  console.log(props);
+  const { deletePost } = usePosts();
+
+  const handleDelete = (id) => {
+    toast((t) => (
+      <div style={{ width: "300px" }}>
+        <p className="text-center">
+          Quieres eliminar el Post? <strong>{id}</strong>
+        </p>
+        <div className="d-flex w-100 justify-content-between">
+          <button className="btn btn-danger" onClick={() => {
+            deletePost(id)
+            toast.dismiss(t.id)
+          }
+          }
+          >
+            Eliminar
+          </button>
+          <button
+            className="btn btn-main-color"
+            onClick={() => toast.dismiss(t.id)}
+          >
+            Cancelar
+          </button>
+        </div>
+      </div>
+    ));
+  };
 
   return (
     <div className="card">
@@ -23,13 +51,16 @@ function DashCard(props) {
           </l1>
         </ul>
         <div className="d-flex justify-content-evenly">
-        <button type="button" class="btn btn-success">
+          <button type="button" class="btn btn-success">
             Editar
           </button>
-          <button type="button" class="btn btn-danger">
+          <button
+            type="button"
+            class="btn btn-danger"
+            onClick={() => handleDelete(props.post._id)}
+          >
             Eliminar
           </button>
-          
         </div>
       </div>
     </div>
