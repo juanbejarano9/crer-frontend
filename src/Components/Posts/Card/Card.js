@@ -25,10 +25,9 @@ function Card(props) {
               </a>
               <div className="service-info">
                 <p>{props.items.subtitle}</p>
-                <h3>Soluciones {props.items.title}</h3>
+                <h3>{props.items.title}</h3>
                 <p>
                   {props.items.completeDescription}
-                  {props.items.parcialDescription}
                 </p>
                 <a href="#Services">
                   <button className="service-info-button" data-active="1">
@@ -43,10 +42,9 @@ function Card(props) {
             <div className="service" id={props.items.title}>
               <div className="service-info">
                 <p>{props.items.subtitle}</p>
-                <h3>Soluciones {props.items.title}</h3>
+                <h3>{props.items.title}</h3>
                 <p>
                   {props.items.completeDescription}
-                  {props.items.parcialDescription}
                 </p>
                 <a href="#Services">
                   <button className="service-info-button" data-active="1">
@@ -80,11 +78,11 @@ function Card(props) {
                     />
                   )}
                   <div className="card-body serviceCardMedium ">
-                    <h4 className="card-title text-white">
+                    <h4 className="card-title text-white fs-5">
                       {props.items.title}
                     </h4>
                     <p className="card-text">
-                      {props.items.completeDescription}
+                      {props.items.parcialDescription}
                     </p>
                     <a href="#Services" className="btn btn-secondary-color">
                       Ver Más
@@ -132,7 +130,7 @@ function Card(props) {
                       aria-labelledby={`panelsStayOpen-heading${props.num}`}
                     >
                       <div className="accordion-body">
-                        {props.items.completeDescription}
+                        {props.items.parcialDescription}
                       </div>
                       <a
                         className="btn btn-secondary-color d-flex justify-content-center m-2 text-dark-color"

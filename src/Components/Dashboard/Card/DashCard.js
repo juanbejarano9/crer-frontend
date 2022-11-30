@@ -2,9 +2,13 @@ import React from "react";
 import "./DashCard.css";
 import { toast } from "react-hot-toast";
 import { usePosts } from "../../../context/postContext";
+import {useNavigate} from "react-router-dom"
+
 
 function DashCard(props) {
   const { deletePost } = usePosts();
+  const navigate  = useNavigate();
+
 
   const handleDelete = (id) => {
     toast((t) => (
@@ -51,7 +55,10 @@ function DashCard(props) {
           </l1>
         </ul>
         <div className="d-flex justify-content-evenly">
-          <button type="button" class="btn btn-success">
+          <button 
+            type="button" 
+            class="btn btn-success"
+            onClick={() => navigate(`/posts/${props.post._id}`)}>
             Editar
           </button>
           <button

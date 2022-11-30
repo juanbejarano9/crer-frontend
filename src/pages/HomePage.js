@@ -49,16 +49,6 @@ export function HomePage() {
         height={windowDimension.winHeight}
       />
       <Footer />
-
-      <div class="bg-white">
-        <p>Tamaño de la pantalla: </p>
-        <p>
-          Width:<strong>{windowDimension.winWidth}</strong>
-        </p>
-        <p>
-          Height:<strong>{windowDimension.winHeight}</strong>
-        </p>
-      </div>
     </div>
   );
 }

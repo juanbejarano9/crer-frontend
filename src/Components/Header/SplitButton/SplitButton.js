@@ -29,7 +29,7 @@ function SplitButton(props) {
         <li>
           <Link
             to={"/dashboard"}
-            className="dropdown-item"
+            className="dropdown-item disabled"
           >
             Dashboard
           </Link>

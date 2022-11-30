@@ -12,6 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
           <Route path="/new" element={<PostForm />}></Route>
+          <Route path="/posts/:id" element={<PostForm />}></Route>
           <Route path="/dashboard" element={<Dashboard/>}></Route>
           <Route path="*" element={<NotFoundPage />}></Route>
         </Routes>
